@@ -18,72 +18,72 @@
     .container {
       max-width: 2300px;
       display: flex;
-      gap: 1.5%; /* 박스와 박스 사이의 간격을 1%로 설정 */
+      gap: 1.5%; /* 박스와 박스 사이의 간격 */
     }
 
     .leftBox, .rightBox {
       box-sizing: border-box;
       overflow: hidden; /* 텍스트가 상자를 벗어나지 않도록 설정 */
-      border-radius: 8px; /* 더 둥글게 설정 */
-      color: #FFFFFF; /* 텍스트 색상을 흰색으로 설정 */
-      width: 100%; /* 화면 전체 가로기준의 48% (2% 간격을 포함하여 100% 적용) */
+      border-radius: 8px; /* 모서리 라운드 설정 */
+      color: #FFFFFF; /* 텍스트 색상 설정 */
+      width: 100%;
       display: flex;
-      flex-direction: column; /* 텍스트를 세로로 배치하기 위해 설정 */
-      justify-content: center; /* 텍스트를 가운데로 정렬하기 위해 설정 */
-      align-items: center; /* 텍스트를 가운데로 정렬하기 위해 설정 */
+      flex-direction: column; /* 텍스트 세로로 배치 */
+      justify-content: center; /* 텍스트 가운데 정렬 */
+      align-items: center; /* 텍스트 가운데 정렬 */
       position: relative; /* 요일을 절대 위치로 설정하기 위해 부모를 relative로 설정 */
     }
 
     .leftBox {
-      background-color: #823AEE; /* 박스 배경 색상을 보라색(#823AEE)으로 설정 */
-      padding-bottom: 76%; /* 48% * 1.4 = 67.2%로 1:1.4 비율 유지 */
+      background-color: #FF9000; /* 박스 배경 색상 설정 */
+      padding-bottom: 76%; / 좌측박스 세로 비율 유지 */
     }
 
     .rightBox {
-      background-color: #823AEE; /* 박스 배경 색상을 보라색(#823AEE)으로 설정 */
-      padding-bottom: 76%; /* 48% * 1.4 = 67.2%로 1:1.4 비율 유지 */
+      background-color: #FF9000; /* 박스 배경 색상 설정 */
+      padding-bottom: 76%; / 우측박스 세로 비율 유지 */
     }
 
     .leftBox p, .rightBox p, .leftBox span, .rightBox span {
-      font-size: 100px; /* 월과 일에 대한 폰트 크기를 150px로 설정 */
-      font-weight: bold; /* 굵게 설정 */
-      margin: 0; /* 기본 마진 제거 */
+      font-size: 100px; /* 월과 일 폰트 크기 */
+      font-weight: bold; /* bold 설정 */
+      margin: 0; /* 기본 마진 */
       position: absolute; /* 절대 위치로 설정 */
-      top: 53%; /* 상단 여백을 50%로 설정하여 상하 중앙으로 이동 */
+      top: 50%; /* 상단 여백을 50%로 설정하여 상하 중앙으로 이동 */
       transform: translateY(-50%); /* 세로 가운데 정렬을 위해 사용 */
     }
 
     .leftBox p:first-child, .leftBox span {
-      font-size: 17px; /* 상단에 추가된 텍스트에 대한 폰트 크기를 20px로 설정 */
-      font-weight: bold; /* 굵게 설정 */
+      font-size: 17px; /* month 폰트 크기 */
+      font-weight: bold; /* bold 설정 */
       position: absolute;
-      top: 12%; /* 상단 여백을 5%로 설정하여 위치 조절 */
-      left: 10%;
+      top: 12%; /* 상단 여백을 설정 */
+      left: 10%; /* 좌측 여백을 설정 */
     }
 
     .rightBox p:first-child, .rightBox span {
-      font-size: 17px; /* 상단에 추가된 텍스트에 대한 폰트 크기를 20px로 설정 */
-      font-weight: bold; /* 굵게 설정 */
+      font-size: 17px; /* days 폰트 크기 */
+      font-weight: bold; /* bold 설정 */
       position: absolute;
-      top: 12%; /* 상단 여백을 5%로 설정하여 위치 조절 */
-      left: 10%;
+      top: 12%; /* 상단 여백을 설정 */
+      left: 10%; /* 좌측 여백을 설정 */
     }
 
     .leftBox p:last-child {
-      font-size: 20px; /* 연도에 대한 폰트 크기를 20px로 설정 */
-      font-weight: bold; /* 굵게 설정 */
+      font-size: 20px; /* 연도 폰트 크기 설정 */
+      font-weight: bold; /* bold 설정 */
       position: absolute;
-      bottom: -0.5%; /* 하단 여백을 50%로 설정하여 상하 중앙으로 이동 */
+      bottom: -0.8%; /* 하단 여백 설정 */
       top: auto;
       right: 7%;
     }
 
     .rightBox p:last-child {
-      font-size: 18px; /* 요일에 대한 폰트 크기를 40px로 설정 */
-      font-weight: bold; /* 굵게 설정 */
+      font-size: 18px; /* 요일 폰트 크기 설정 */
+      font-weight: bold; /* bold 설정 */
       text-transform: uppercase;
       position: absolute;
-      bottom: 0%; /* 하단 여백을 50%로 설정하여 상하 중앙으로 이동 */
+      bottom: 0%; /* 하단 여백 설정 */
       top: auto;
       right: 7%;
     }
@@ -105,7 +105,7 @@
     </div>
 
     <div class="rightBox">
-      <span>DAYS</span>
+      <span>DAY</span>
       <script>
         var currentDate = new Date();
         var day = ('0' + currentDate.getDate()).slice(-2);
