@@ -18,13 +18,13 @@
     .container {
       max-width: 2300px;
       display: flex;
-      gap: 2%; /* 박스와 박스 사이의 간격을 1%로 설정 */
+      gap: 1.5%; /* 박스와 박스 사이의 간격을 1%로 설정 */
     }
 
     .leftBox, .rightBox {
       box-sizing: border-box;
       overflow: hidden; /* 텍스트가 상자를 벗어나지 않도록 설정 */
-      border-radius: 5px; /* 더 둥글게 설정 */
+      border-radius: 8px; /* 더 둥글게 설정 */
       color: #FFFFFF; /* 텍스트 색상을 흰색으로 설정 */
       width: 100%; /* 화면 전체 가로기준의 48% (2% 간격을 포함하여 100% 적용) */
       display: flex;
@@ -45,7 +45,7 @@
     }
 
     .leftBox p, .rightBox p, .leftBox span, .rightBox span {
-      font-size: 90px; /* 월과 일에 대한 폰트 크기를 150px로 설정 */
+      font-size: 100px; /* 월과 일에 대한 폰트 크기를 150px로 설정 */
       font-weight: bold; /* 굵게 설정 */
       margin: 0; /* 기본 마진 제거 */
       position: absolute; /* 절대 위치로 설정 */
@@ -54,28 +54,28 @@
     }
 
     .leftBox p:first-child, .leftBox span {
-      font-size: 19px; /* 상단에 추가된 텍스트에 대한 폰트 크기를 20px로 설정 */
+      font-size: 17px; /* 상단에 추가된 텍스트에 대한 폰트 크기를 20px로 설정 */
       font-weight: bold; /* 굵게 설정 */
       position: absolute;
-      top: 16%; /* 상단 여백을 5%로 설정하여 위치 조절 */
-      justify-content: center;
+      top: 12%; /* 상단 여백을 5%로 설정하여 위치 조절 */
+      left: 10%;
     }
 
     .rightBox p:first-child, .rightBox span {
-      font-size: 19px; /* 상단에 추가된 텍스트에 대한 폰트 크기를 20px로 설정 */
+      font-size: 17px; /* 상단에 추가된 텍스트에 대한 폰트 크기를 20px로 설정 */
       font-weight: bold; /* 굵게 설정 */
       position: absolute;
-      top: 16%; /* 상단 여백을 5%로 설정하여 위치 조절 */
-      justify-content: center;
+      top: 12%; /* 상단 여백을 5%로 설정하여 위치 조절 */
+      left: 10%;
     }
 
     .leftBox p:last-child {
       font-size: 20px; /* 연도에 대한 폰트 크기를 20px로 설정 */
       font-weight: bold; /* 굵게 설정 */
       position: absolute;
-      bottom: 0; /* 하단 여백을 50%로 설정하여 상하 중앙으로 이동 */
+      bottom: -0.5%; /* 하단 여백을 50%로 설정하여 상하 중앙으로 이동 */
       top: auto;
-      left: 40%;
+      right: 7%;
     }
 
     .rightBox p:last-child {
@@ -83,9 +83,9 @@
       font-weight: bold; /* 굵게 설정 */
       text-transform: uppercase;
       position: absolute;
-      bottom: 0; /* 하단 여백을 50%로 설정하여 상하 중앙으로 이동 */
+      bottom: 0%; /* 하단 여백을 50%로 설정하여 상하 중앙으로 이동 */
       top: auto;
-      right: 10%;
+      right: 7%;
     }
   </style>
 </head>
