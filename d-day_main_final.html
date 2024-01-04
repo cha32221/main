@@ -19,7 +19,7 @@
       box-sizing: border-box;
       overflow: hidden;
       border-radius: 8px;
-      color: #FFFFFF;
+      color: #000000;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -30,23 +30,24 @@
 
     .Box {
       background-color: #DD47FF;
-      padding-bottom: 50%;
+      padding-bottom: 58%;
     }
 
     .Box p, .Box span {
-      font-size: 80px;
+      font-size: 100px;
       font-weight: bold;
       margin: 0;
       position: absolute;
-      top: 36%;
-      left: 40%;
+      top: 55%;
+      left: 25%;
+      transform: translateY(-50%); /* 세로 가운데 정렬을 위해 사용 */
     }
 
     .Box p:first-child, .Box span {
       font-size: 15px;
       font-weight: bold;
       position: absolute;
-      top: 13%;
+      top: 18%;
       left: 7%;
     }
   </style>
@@ -55,10 +56,10 @@
 
   <div class="container">
     <div class="Box">
-      <span>공인중개사 시험일</span> <!-- '월'을 'D-DAY'로 변경 -->
+      <span>시험 접수일</span> <!-- '월'을 'D-DAY'로 변경 -->
       <script>
         var currentDate = new Date();
-        var dDay = new Date(2024, 9, 26); // D-day를 2024년 1월 7일로 설정
+        var dDay = new Date(2024, 9, 26); // D-day 설정
         var remainingDays = Math.ceil((dDay - currentDate) / (1000 * 60 * 60 * 24)); // 남은 일수 계산
 
         document.write("<p>- " + remainingDays + "</p>"); // 남은 일수 표시
