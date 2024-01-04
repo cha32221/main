@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Fjalla One', sans-serif;
+      text-align: center;
+      margin: 0px;
+    }
+
+    .Box {
+      box-sizing: border-box;
+      overflow: hidden;
+      border-radius: 8px;
+      color: #FFFFFF;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .Box {
+      background-color: #DD47FF;
+      padding-bottom: 76%;
+    }
+
+    .Box p, .Box span {
+      font-size: 120px;
+      font-weight: bold;
+      margin: 0;
+      position: absolute;
+      top: 56%;
+      transform: translateY(-50%);
+    }
+
+    .Box p:first-child, .Box span {
+      font-size: 19px;
+      font-weight: bold;
+      position: absolute;
+      top: 21%;
+      left: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="Box">
+      <span>공인중개사 시험일</span> <!-- '월'을 'D-DAY'로 변경 -->
+      <script>
+        var currentDate = new Date();
+        var dDay = new Date(2024, 9, 26); // D-day를 2024년 1월 7일로 설정
+        var remainingDays = Math.ceil((dDay - currentDate) / (1000 * 60 * 60 * 24)); // 남은 일수 계산
+
+        document.write("<p>- " + remainingDays + "</p>"); // 남은 일수 표시
+      </script>
+    </div>
+  </div>
+
+</body>
+</html>
