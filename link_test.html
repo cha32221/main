@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Black Han Sans', sans-serif;
+      text-align: center;
+      margin: 0px;
+    }
+
+    .Box {
+      box-sizing: border-box;
+      overflow: hidden;
+      border-radius: 8px;
+      color: #FFFFFF;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: #E6002D;
+      padding-bottom: 30%;
+      cursor: pointer; /* 커서 모양 변경 */
+    }
+
+    .Box p, .Box span {
+      font-size: 40px;
+      margin: 0;
+      position: absolute;
+      top: 52%;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-50%); /* 세로 가운데 정렬을 위해 사용 */
+    }
+
+    .Box::before {
+      content: '';
+      position: absolute;
+      width: 75%;
+      height: 2px;
+      background-color: #FFFFFF;
+      top: 33%;
+    }
+
+    .Box::after {
+      content: '';
+      position: absolute;
+      width: 75%;
+      height: 2px;
+      background-color: #FFFFFF;
+      bottom: 33%;
+    }
+
+    .Box::before,
+    .Box::after {
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="https://www.naver.com" target="_blank"> <!-- 새 창에서 열기 -->
+      <div class="Box">
+        <span>박문각 [나의학습] 바로가기</span> <!-- '월'을 'D-DAY'로 변경 -->
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>
