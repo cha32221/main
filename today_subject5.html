@@ -30,7 +30,7 @@
     }
 
     .Box p, .Box span {
-      font-size: 35px;
+      font-size: 40px;
       margin: 0;
       position: absolute;
       top: 55%;
@@ -38,15 +38,35 @@
       align-items: center;
       transform: translateY(-50%); /* 세로 가운데 정렬을 위해 사용 */
     }
-
   </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var today = new Date().getDay(); // 현재 요일을 가져옴
+      document.getElementById('subject').innerText = '[' + getSubject(today) + ']';
+    });
+
+    function getSubject(day) {
+      var subjects = [
+        ' 부동산 세법 ',
+        ' 공인중개사법 ',
+        ' 부동산학개론 ',
+        ' 민사 특별법 ',
+        ' 부동산 공법 ',
+        ' 부동산공시법령 ',
+        ' 자유과목 '
+       ];
+      return subjects[day];
+    }
+  </script>
 </head>
 <body>
 
   <div class="container">
     <div class="Box">
-        <span><b>[ 부동산공시법령 ]</b></span>
-        <i><p style="position: absolute; top: 13%; left: 6%; font-size: 20px; color: #000000;">오늘수강과목</p></i>
+        <span><b id="subject">[AAAA]</b></span>
+        <i><p style="position: absolute; top: 15%; left: 7%; font-size: 20px; color: #000000;">금일 수강과목</p></i>
     </div>
   </div>
 
