@@ -1,0 +1,32 @@
+const url = 'https://lassele.com'; // 여기에 접속할 웹사이트 URL을 입력하세요
+
+function checkWebsite() {
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+            // 필요한 경우 추가 헤더를 여기에 추가
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text(); // 응답 본문을 읽어들입니다.
+        } else {
+            throw new Error(`상태 코드 ${response.status}`);
+        }
+    })
+    .then(data => {
+        const resultText = `[${new Date().toLocaleString()}] ${url} 접속 성공: 응답 본문 크기 ${data.length} 바이트`;
+        document.getElementById('result').innerHTML += `<p>${resultText}</p>`;
+    })
+    .catch(error => {
+        const resultText = `[${new Date().toLocaleString()}] ${url} 접속 실패: ${error.message}`;
+        document.getElementById('result').innerHTML += `<p>${resultText}</p>`;
+    });
+}
+
+// 1분(60,000 밀리초)마다 checkWebsite 함수 실행
+setInterval(checkWebsite, 60000);
+
+// 페이지가 로드될 때 처음으로 checkWebsite 함수 실행
+checkWebsite();
