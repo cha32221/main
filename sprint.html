@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>웹사이트 접속 모니터링</title>
+</head>
+<body>
+    <h1>웹사이트 접속 결과</h1>
+    <div id="result">결과가 여기에 표시됩니다...</div>
+
+    <script>
+        // 모니터링할 URL
+        const url = 'https://go-sprint.co.kr'; // 여기에 접속할 웹사이트 URL을 입력하세요
+
+        // 5분마다 실행할 함수
+        function checkWebsite() {
+            fetch(url)
+                .then(response => {
+                    const statusText = response.ok ? '성공' : '실패';
+                    const resultText = `[${new Date().toLocaleString()}] ${url} 접속 ${statusText}: 상태 코드 ${response.status}`;
+                    document.getElementById('result').innerHTML += `<p>${resultText}</p>`;
+                })
+                .catch(error => {
+                    const resultText = `[${new Date().toLocaleString()}] ${url} 접속 실패: ${error.message}`;
+                    document.getElementById('result').innerHTML += `<p>${resultText}</p>`;
+                });
+        }
+
+        // 5분(300,000밀리초)마다 checkWebsite 함수 실행
+        setInterval(checkWebsite, 300000);
+
+        // 페이지가 로드될 때 처음으로 checkWebsite 함수 실행
+        checkWebsite();
+    </script>
+</body>
+</html>
