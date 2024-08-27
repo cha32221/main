@@ -56,4 +56,10 @@
                 });
         }
 
-        setI
+        // 1분 주기로 checkAllWebsites 함수 실행
+        setInterval(checkAllWebsites, 60000);
+        // 페이지 로드 시 즉시 checkAllWebsites 함수 실행
+        checkAllWebsites();
+    </script>
+</body>
+</html>
