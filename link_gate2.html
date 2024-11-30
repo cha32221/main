@@ -18,18 +18,18 @@
       box-sizing: border-box;
       border-radius: 8px;
       color: #FFF;
-      width: 100%;
+      width: 75%; /* 가로 크기 25% 축소 */
+      padding-bottom: 37.5%; /* 세로 크기 25% 축소 */
       display: flex;
       justify-content: center;
       align-items: center;
       background: #E6002D;
-      padding-bottom: 50%;
       cursor: pointer;
       position: relative;
     }
 
-    .Box p, .Box span {
-      font-size: 50px;
+    .Box span {
+      font-size: 37.5px; /* 폰트 크기 25% 축소 */
       margin: 0;
       position: absolute;
       top: 50%;
@@ -39,8 +39,8 @@
     .Box::before, .Box::after {
       content: '';
       position: absolute;
-      width: 80%;
-      height: 2px;
+      width: 60%; /* 선의 너비도 25% 축소 */
+      height: 1.5px; /* 선 두께 25% 축소 */
       background: #FFF;
     }
 
