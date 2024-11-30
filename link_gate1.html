@@ -9,71 +9,57 @@
 
   <style>
     body {
-      font-family: 'Bebas Neue', sans-serif;
       font-family: 'Black Han Sans', sans-serif;
       text-align: center;
-      margin: 0px;
+      margin: 0;
     }
 
     .Box {
       box-sizing: border-box;
-      overflow: hidden;
       border-radius: 8px;
-      color: #FFFFFF;
+      color: #FFF;
       width: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
-      background-color: #E6002D;
+      background: #E6002D;
       padding-bottom: 50%;
-      cursor: pointer; /* 커서 모양 변경 */
+      cursor: pointer;
+      position: relative;
     }
 
     .Box p, .Box span {
-      font-size: 37px;
+      font-size: 50px;
       margin: 0;
       position: absolute;
-      top: 52%;
-      justify-content: center;
-      align-items: center;
-      transform: translateY(-50%); /* 세로 가운데 정렬을 위해 사용 */
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    .Box::before {
+    .Box::before, .Box::after {
       content: '';
       position: absolute;
       width: 80%;
       height: 2px;
-      background-color: #FFFFFF;
+      background: #FFF;
+    }
+
+    .Box::before {
       top: 33%;
     }
 
     .Box::after {
-      content: '';
-      position: absolute;
-      width: 80%;
-      height: 2px;
-      background-color: #FFFFFF;
       bottom: 33%;
-    }
-
-    .Box::before,
-    .Box::after {
-      justify-content: center;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <a href="https://www.pmg.co.kr/user/plo/mycrs22/CM_MyOpenCrs_R01_Main.asp?dn=landspa" target="_blank"> <!-- 새 창에서 열기 -->
+    <a href="https://www.pmg.co.kr/user/plo/mycrs22/CM_MyOpenCrs_R01_Main.asp?dn=landspa" target="_blank">
       <div class="Box">
-        <span>[나의학습] 바로가기</span>
+        <span>[매물관리 리스트]</span>
       </div>
     </a>
   </div>
-
 </body>
 </html>
