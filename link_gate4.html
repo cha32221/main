@@ -23,7 +23,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #E6002D;
+      background: #FF4500;
       cursor: pointer;
       position: relative;
     }
@@ -42,8 +42,9 @@
       width: 80%; /* 선의 너비도 25% 축소 */
       height: 1.5px; /* 선 두께 25% 축소 */
       background: #FFF;
-      display: block; /* 브라우저 차이를 줄이기 위해 block 지정 */
-      box-sizing: border-box; /* 두께 계산 보정 */
+      transform-origin: center; /* 크기 변형 기준점 설정 */
+      transform: scaleY(1); /* 두께 보정 */
+      display: block; /* 브라우저 일관성 유지 */
     }
 
     .Box::before {
@@ -59,7 +60,7 @@
   <div class="container">
     <a href="https://www.pmg.co.kr/user/plo/mycrs22/CM_MyOpenCrs_R01_Main.asp?dn=landspa" target="_blank">
       <div class="Box">
-        <span>[매물관리 리스트]</span>
+        <span>[매물관리]</span>
       </div>
     </a>
   </div>
